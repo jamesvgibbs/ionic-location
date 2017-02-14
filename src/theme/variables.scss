@@ -13,7 +13,32 @@ $font-path: "../assets/fonts";
 // http://ionicframework.com/docs/v2/theming/overriding-ionic-variables/
 
 
-$background-color: #ac6477;
+$light:				#fff !default;
+$stable:			#f8f8f8 !default;
+$positive:			#387ef5 !default;
+$calm:				#11c1f3 !default;
+$balanced:			#33cd5f !default;
+$energized:			#ffc900 !default;
+$assertive:			#ef473a !default;
+$royal:				#886aea !default;
+$dark:				#444 !default;
+
+$background-color: $dark;
+
+$text-color:                 $light !default;
+$link-color:                 $balanced !default;
+$background-color:           $light !default;
+$subdued-text-color:         #666 !default;
+
+$toolbar-background:         $dark !default; //top of menu/toolbar
+$toolbar-border-color:       $light !default;
+$toolbar-text-color:         $text-color !default;
+$toolbar-active-color:       $link-color !default;
+$toolbar-inactive-color:     #8c8c8c !default;
+
+$list-text-color:            $text-color !default;
+$list-background-color:      $background-color !default; //list background
+$list-border-color:          $light !default;
 
 
 
@@ -25,22 +50,15 @@ $background-color: #ac6477;
 // colors so you can add, rename and remove colors as needed.
 // The "primary" color is the only required color in the map.
 
-//$colors: (
-//  primary:    #387ef5,
-//  secondary:  #32db64,
-//  danger:     #f53d3d,
-//  light:      #f4f4f4,
-//  dark:       #222
-//);
-
 $colors: (
-  primary:    #ac6477,
-  secondary:  #985869,
-  danger:     #f53d3d,
-  light:      #f4f4f4,
-  dark:       #222
-);
 
+	primary:    $positive,
+	secondary:  $calm,
+	danger:     $assertive,
+	light:      $light,
+	dark:       $dark
+
+) !default;
 
 // App iOS Variables
 // --------------------------------------------------

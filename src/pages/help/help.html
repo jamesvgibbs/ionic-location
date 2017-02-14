@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      Help
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="logout()">
+        <ion-icon name="exit"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+	<ion-grid>
+		<ion-row>
+			<ion-col>
+				<h1>About Page</h1>
+			</ion-col>
+		</ion-row>
+		<ion-row>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed blandit nunc. Aliquam erat volutpat. Curabitur quis gravida mauris, at euismod elit. Donec mollis dapibus felis, sed auctor elit lacinia a. Proin ut lacus ultrices, sodales neque vitae, volutpat mauris. Donec tempor, tellus ac imperdiet ullamcorper, urna ligula viverra velit, in bibendum elit lectus ut mi. Nulla tempus placerat scelerisque. Sed metus metus, laoreet vitae diam eget, pretium faucibus ligula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ut lectus dui. Maecenas quis ex tristique, pellentesque tortor vel, dignissim ante. Nulla magna ante, ornare eu vehicula ac, imperdiet a mi. Integer rutrum luctus varius. Nam sit amet est at urna dictum condimentum.
+		</ion-row>
+		<ion-row>
+			<button ion-button full outline (click)="openPrivacy()">Privacy Policy</button>
+		</ion-row>
+		<ion-row>
+			<button ion-button full outline (click)="openTerms()">Terms of Service</button>
+		</ion-row>
+		<ion-row>
+			<button ion-button full outline (click)="openGoogle()">Google Maps - Legal Notices</button>
+		</ion-row>
+	</ion-grid>
+
+</ion-content>

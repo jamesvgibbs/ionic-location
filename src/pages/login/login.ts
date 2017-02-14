@@ -12,10 +12,12 @@ export class LoginPage {
 	loading: Loading;
 	registerCredentials = {email: '', password: ''};
 
-  	constructor(private nav: NavController, private auth: AuthService, private alertCtrl: AlertController, private loadingCtrl: LoadingController) {}
+  	constructor(private navCtrl: NavController, private auth: AuthService, private alertCtrl: AlertController, private loadingCtrl: LoadingController) {
+  		
+  	}
  
 	public createAccount() {
-		this.nav.push(RegisterPage);
+		this.navCtrl.push(RegisterPage);
 	}
 
 	public login(){
@@ -24,7 +26,7 @@ export class LoginPage {
 			if(allowed){
 				setTimeout(() => {
 					this.loading.dismiss();
-					this.nav.setRoot(HomePage);
+					this.navCtrl.setRoot(HomePage);
 				});
 			}else{
 				this.showError('Access Denied');

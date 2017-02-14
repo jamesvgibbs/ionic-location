@@ -1,0 +1,10 @@
+TODO
+
+Loading Component
+https://www.joshmorony.com/how-to-create-a-custom-loading-component-in-ionic-2/
+
+Background Processing
+https://www.joshmorony.com/adding-background-geolocation-to-an-ionic-2-application/
+
+Notification (Chat)
+https://github.com/ionic-samples/ionic-messenger-starter

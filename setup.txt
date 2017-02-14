@@ -1,0 +1,67 @@
+-- Create Ionic Project --
+ionic start location-app sidemenu --v2
+
+-- Create Page --
+ionic g page myPage
+
+-- Create Provider --
+ionic g provider MyData
+
+-- Add Platforms --
+ionic platform add ios
+ionic platform add android
+
+-- Connectivity Plugin --
+ionic plugin add cordova-plugin-network-information
+
+-- GeoLocation Plugin --
+ionic plugin add cordova-plugin-geolocation
+
+-- Background GeoLocation Updates -- 
+ionic plugin add cordova-plugin-mauron85-background-geolocation
+
+-- Local Notifications --
+ionic plugin add de.appplant.cordova.plugin.local-notification
+
+-- Google Maps -- 
+$ ionic plugin add cordova-plugin-googlemaps --variable API_KEY_FOR_ANDROID="YOUR_ANDROID_API_KEY_IS_HERE" --variable API_KEY_FOR_IOS="AIzaSyA5mfT09zMPXsDrsRiIqiih8nHHdq__l9w"
+
+
+-- Add Moment.JS
+npm install moment --save
+
+-- Run Ionic --
+ionic serve -l -c -s
+
+-- Run Ionic iOS --
+ionic run -l
+
+-- Create Icon Resource --
+ionic resources --icon
+
+-- Create Splash Resource --
+ionic resources --splash
+
+-- upgrade node --
+sudo n latest
+
+
+-- NOT YET --
+
+-- Intro --
+https://www.joshmorony.com/creating-a-sliding-introduction-component-in-ionic-2/
+
+-- Styling --
+https://www.joshmorony.com/a-guide-to-styling-an-ionic-2-application/
+https://www.joshmorony.com/create-a-stylish-news-feed-layout-in-ionic-2/
+
+-- Testing --
+https://www.joshmorony.com/introduction-to-testing-ionic-2-applications-with-testbed/
+https://www.joshmorony.com/test-driven-development-in-ionic-2-http-and-mocks/
+https://www.joshmorony.com/test-driven-development-in-ionic-2-navigation-and-spies/
+
+-- Virtual Scrolling --
+https://www.joshmorony.com/boosting-scroll-performance-in-ionic-2/
+
+-- Setup SASS --
+ionic setup sass

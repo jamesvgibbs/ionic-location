@@ -1,34 +1,29 @@
-<ion-content>
-  <ion-row>
-    <ion-col></ion-col>
-    <ion-col width-67>
-      <img src="http://placehold.it/300x200"/>
-    </ion-col>
-    <ion-col></ion-col>
-  </ion-row>
-  <div>
-    <form (ngSubmit)="login()" #registerForm="ngForm">
-      <ion-row>
-        <ion-col>
-          <ion-list inset>
-            
-            <ion-item>
-              <ion-input type="text" placeholder="Email" name="email" [(ngModel)]="registerCredentials.email" required autocomplete="off" autocorrect="off" autocapitalize="off"></ion-input>
-            </ion-item>
-            
-            <ion-item>
-              <ion-input type="password" placeholder="Password" name="password" [(ngModel)]="registerCredentials.password" required></ion-input>
-            </ion-item>
-            
-          </ion-list>
-        </ion-col>
-      </ion-row>
+<ion-content class="login">
+  <div class="spacer"></div>
+  <form (ngSubmit)="login()" #registerForm="ngForm" autocomplete="off">
+    <ion-list inset>
       
-      <!-- align to the bottom of the page -->
-      <div class="bottom-page">
+      <ion-item>
+        <ion-label fixed>Email</ion-label>
+        <ion-input type="text" placeholder="Email" name="email" title="Email" [(ngModel)]="loginCredentials.email" required autocorrect="off" autocapitalize="off"></ion-input>
+      </ion-item>
+      
+      <ion-item>
+        <ion-label fixed>Password</ion-label>
+        <ion-input type="password" placeholder="Password" name="password" [(ngModel)]="loginCredentials.password" required autocorrect="off" autocapitalize="off"></ion-input>
+      </ion-item>
+      
+    </ion-list>
+    
+    <!-- align to the bottom of the page -->
+    <div class="bottom-page">
+      <ion-row>
         <button ion-button full type="submit" [disabled]="!registerForm.form.valid">Login</button>
-        <button ion-button full color="light" (click)="createAccount()">Create New Account</button>
-      </div>
-    </form>
-  </div>
+      </ion-row>
+      <ion-row>
+        <button ion-button full color="light" (click)="forgotPassword()">Forgot Password</button>
+      </ion-row>
+    </div>
+  </form>
+
 </ion-content>

@@ -4,14 +4,14 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-	<div id="map"></div>
-	<h1>Google Maps</h1>
-	<button ion-button full outline (click)="getMapsLegal()">Show Legal Notice</button>
-	<div id="licenseView" ></div>
+<ion-content>
+	<div padding class="google-info">
+		<h1>Google Maps</h1>
+		<p id="licenseView" ></p>
+	</div>
 	<ion-fab bottom right>
-		<button ion-fab color="light" (click)="scrollToTop()">
-			<ion-icon name="arrow-dropup"></ion-icon>
-		</button>
-	</ion-fab>
+			<button ion-fab color="calm" (click)="scrollToTop()">
+				<ion-icon name="arrow-dropup"></ion-icon>
+			</button>
+		</ion-fab>
 </ion-content>

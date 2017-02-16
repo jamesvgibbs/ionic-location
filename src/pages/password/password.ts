@@ -1,35 +1,30 @@
 import { Component } from '@angular/core';
 import { NavController, AlertController, LoadingController, Loading } from 'ionic-angular';
+import { LoginPage } from '../login/login';
 import { AuthService } from '../../providers/auth-service';
-import { HomePage } from '../home/home';
-import { PasswordPage } from '../password/password';
 
 @Component({
-  selector: 'page-login',
-  templateUrl: 'login.html'
+  selector: 'page-password',
+  templateUrl: 'password.html'
 })
-export class LoginPage {
+export class PasswordPage {
 	loading: Loading;
-	loginCredentials = {email: '', password: ''};
+	passwordCredentials = {email: ''};
 
-  	constructor(private navCtrl: NavController, 
+	constructor(private navCtrl: NavController, 
   		private auth: AuthService, 
   		private alertCtrl: AlertController, 
   		private loadingCtrl: LoadingController) {
   		
   	}
 
-	public forgotPassword(){
-		this.navCtrl.push(PasswordPage);
-	}
-
-	public login(){
+	public getPassword(){
 		this.showLoading();
-		this.auth.login(this.loginCredentials).subscribe(allowed => {
+		this.auth.password(this.passwordCredentials).subscribe(allowed => {
 			if(allowed){
 				setTimeout(() => {
 					this.loading.dismiss();
-					this.navCtrl.setRoot(HomePage);
+					this.showConfirm();
 				});
 			}else{
 				this.showError('Access Denied');
@@ -37,6 +32,22 @@ export class LoginPage {
 		}, error => {
 			this.showError(error);
 		});
+	}
+
+	showConfirm(){
+		let confirm = this.alertCtrl.create({
+			title: 'Password Sent',
+			message: 'Your password was sent to your email. Please check your email.',
+			buttons:[
+				{
+					text: 'OK',
+					handler: () => {
+						this.navCtrl.setRoot(LoginPage);
+					}
+				}
+			]
+		});
+		confirm.present();
 	}
 
 	showLoading(){
@@ -59,5 +70,4 @@ export class LoginPage {
 
 		alert.present(prompt);
 	}
-
 }

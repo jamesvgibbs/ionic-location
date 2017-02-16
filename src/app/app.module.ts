@@ -1,13 +1,15 @@
 import { NgModule, ErrorHandler } from '@angular/core';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
+import { Storage } from '@ionic/storage';
+
 import { LocationApp } from './app.component';
 
 import { LoginPage } from '../pages/login/login';
-import { RegisterPage } from '../pages/register/register';
+import { PasswordPage } from '../pages/password/password';
 import { HomePage } from '../pages/home/home';
 import { NotificationPage } from '../pages/notification/notification';
 import { CampusmapPage } from '../pages/campusmap/campusmap';
-import { HelpPage } from '../pages/help/help';
+import { AboutPage } from '../pages/about/about';
 import { TermsPage } from '../pages/terms/terms';
 import { PrivacyPage } from '../pages/privacy/privacy';
 import { GooglePage } from '../pages/google/google';
@@ -20,11 +22,11 @@ import { LocationTracker } from '../providers/location-tracker';
   declarations: [
     LocationApp,
     HomePage,
+    PasswordPage,
     LoginPage,
-    RegisterPage,
     NotificationPage,
     CampusmapPage,
-    HelpPage,
+    AboutPage,
     TermsPage,
     PrivacyPage,
     GooglePage
@@ -37,14 +39,18 @@ import { LocationTracker } from '../providers/location-tracker';
     LocationApp,
     HomePage,
     LoginPage,
-    RegisterPage,
+    PasswordPage,
     NotificationPage,
     CampusmapPage,
-    HelpPage,
+    AboutPage,
     TermsPage,
     PrivacyPage,
     GooglePage
   ],
-  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}, AuthService, ConnectivityService, LocationTracker]
+  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}, 
+    AuthService, 
+    ConnectivityService, 
+    LocationTracker,
+    Storage]
 })
 export class AppModule {}

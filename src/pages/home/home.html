@@ -1,20 +1,41 @@
-<ion-header>
+<ion-header no-border>
   <ion-navbar>
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
-    <ion-title>
-      Member Area
-    </ion-title>
-    <ion-buttons end>
-      <button ion-button (click)="logout()">
-        <ion-icon name="exit"></ion-icon>
-      </button>
+    <ion-buttons end *ngIf="showSkip">
+      <button ion-button (click)="startApp()" color="primary">Skip</button>
     </ion-buttons>
   </ion-navbar>
 </ion-header>
  
-<ion-content class="home" padding>
-  <h3>Welcome inside, {{username}}!</h3>
-  Your Email is: {{email}}
+  <!--<h3>Welcome inside, {{username}}!</h3>
+  Your Email is: {{email}}-->
+
+<ion-content no-bounce>
+  <ion-slides (ionSlideWillChange)="slideChangeStart($event)" pager>
+
+    <ion-slide>
+      <img src="assets/img/ica-slidebox-img-1.png" class="slide-image"/>
+      <h2 class="slide-title">
+        Welcome to <b>RIIPL</b>
+      </h2>
+      <p>
+        The <b>location app</b> is a ...
+      </p>
+    </ion-slide>
+
+    <ion-slide>
+      <img src="assets/img/ica-slidebox-img-2.png" class="slide-image"/>
+      <h2 class="slide-title" >What is This?</h2>
+      <p><b>RIIPL</b> is an ...</p>
+    </ion-slide>
+
+    <ion-slide>
+      <img src="assets/img/ica-slidebox-img-3.png" class="slide-image"/>
+      <h2 class="slide-title">Ready to Start?</h2>
+      <button ion-button icon-right large clear (click)="startApp()">
+        Continue
+        <ion-icon name="arrow-forward"></ion-icon>
+      </button>
+    </ion-slide>
+
+  </ion-slides>
 </ion-content>

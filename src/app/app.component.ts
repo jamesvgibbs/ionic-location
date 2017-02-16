@@ -1,12 +1,13 @@
 import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';
 import { StatusBar, Splashscreen } from 'ionic-native';
+import { Storage } from '@ionic/storage';
 
 import { LoginPage } from '../pages/login/login';
 import { HomePage } from '../pages/home/home';
 import { CampusmapPage } from '../pages/campusmap/campusmap';
 import { NotificationPage } from '../pages/notification/notification';
-import { HelpPage } from '../pages/help/help';
+import { AboutPage } from '../pages/about/about';
 
 @Component({
   templateUrl: 'app.html'
@@ -21,10 +22,9 @@ export class LocationApp {
     this.initializeApp();
     
     this.pages = [
-      {title: 'Home', component: HomePage},
       {title: 'Nofication', component: NotificationPage},
       {title: 'Map', component: CampusmapPage},
-      {title: 'Help', component: HelpPage}
+      {title: 'About', component: AboutPage}
     ];
     
   }

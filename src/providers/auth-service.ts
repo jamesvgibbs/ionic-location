@@ -32,9 +32,19 @@ export class AuthService {
 			});
 		}
 	}
+
+	public password(credentials){
+		if(credentials.email === null){
+ 			return Observable.throw('Please insert email');
+ 		}else{
+ 			return Observable.create(observer => {
+ 				observer.next(true);
+ 				observer.complete();
+ 			});
+ 		}
+	}
  	
  	public register(credentials){
- 		console.log(credentials);
  		if(credentials.email === null || credentials.password === null){
  			return Observable.throw('Please insert credentials');
  		}else{

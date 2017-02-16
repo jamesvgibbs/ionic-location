@@ -1,7 +1,12 @@
 page-google {
-	#licenseView {
-		display: none;
-		overflow: scroll;
+	
+	.google-info{ 
+		background-color: #ffffff;
+		color: #000000;
+		
+		p {
+			color: #697072;
+			text-align: left;
+		}
 	}
-
 }
